@@ -1,11 +1,16 @@
 name: "Test workflow"
-on: push
+on: 
+  push:
+  issues:
+    types: [opened, edited, milestoned]
 jobs:
   test_job:
     runs-on: ubuntu-latest
     steps:
       - name: "Print github context"
-        run: echo "${{ toJSON(github) }}"
+        run: |
+          echo "Event is:"
+          echo "${{ toJSON(github) }}"|jq .event_name
       - name: "Test step1"
         run: echo "This is step 1"
       - name: "Test step2"
