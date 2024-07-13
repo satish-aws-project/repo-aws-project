@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Print github context"
-        run: echo ${{ toJSON(github) }}
+        run: echo "${{ toJSON(github) }}"
       - name: "Test step1"
         run: echo "This is step 1"
       - name: "Test step2"
