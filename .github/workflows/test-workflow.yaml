@@ -10,7 +10,7 @@ jobs:
       - name: "Print github context"
         run: |
           echo "Event is:"
-          echo "${{ toJSON(github).event_name }}"
+          echo "${{ toJSON(github.event_name) }}"
       - name: "Test step1"
         run: echo "This is step 1"
       - name: "Test step2"
