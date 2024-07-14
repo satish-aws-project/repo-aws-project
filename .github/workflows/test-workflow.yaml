@@ -26,4 +26,4 @@ jobs:
       - name: "step1 in task2"
         run: echo "This is step 1"
       - name: "step2 in task2"
-        run: echo ${{ needs.test_job.ouputs.my_output}}
+        run: echo ${{ needs.test_job.outputs.my_output}}
